@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "A SVG logo generator. Answer the prompts to create your own SVG logo!",
   "main": "index.js",
-  "scripts":{
+  "scripts": {
     "start": "node index.js",
     "test": "jest"
   },
   "dependencies": {
-    "inquirer": "^9.2.16"
+    "inquirer": "^8.2.4"
   },
   "devDependencies": {
     "jest": "^29.7.0"
