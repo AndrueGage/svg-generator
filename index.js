@@ -3,7 +3,7 @@ const fs = require('fs');
 const { Circle, Triangle, Square } = require('./lib/shapes');
 
 const questions = () => {
-    return inquirer.createPromptModule([
+    return inquirer.prompt([
         {
             type: 'input',
             name: 'text',
@@ -19,7 +19,7 @@ const questions = () => {
             type: 'list',
             name: 'shape',
             message: 'Choose your shape:',
-            choices: ['circle', 'triangle', 'sqaure'],
+            choices: ['circle', 'triangle', 'square'],
         },
         {
             type: 'input',
@@ -55,8 +55,8 @@ const generateSvg = (answers) => {
     });
 };
 
-const init = () => {
-    const answers = questions();
+const init = async () => {
+    const answers = await questions();
     generateSvg(answers);
 };
 
